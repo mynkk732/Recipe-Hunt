@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Overpass&family=Poppins&family=Roboto+Slab:wght@300&display=swap');
+*{
+    padding: 0px;
+    margin:  0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Overpass', sans-serif
+}
+
+nav{
+    height: 90px;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px 0px 50px;  
+        /* top right bottom lift */
+}
+
+.logo{
+    font-size: 30px;
+    font-weight:600;
+    color: rgb(216, 146, 22);
+}
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0px 8px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(216, 146, 22);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover{
+    color: whitesmoke;
+    background-color:rgb(216, 146, 22) ;
+    
+}
+
+nav .menu-btn i{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+#click{
+    display: none;
+}
+
+@media (max-width: 920px){
+    nav .menu-btn i{
+        display: block;
+    }
+     
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+
+    nav ul{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        background-color: black;
+        transition: all 0.4s ease;
+    }
+
+    #click:checked ~ ul{
+       right: 0%;
+    }
+
+    nav ul li{
+        margin: 50px 0px;
+    }
+
+    nav ul li a{
+        font-size: 28px;
+        display: block;
+        color: whitesmoke;
+    }
+
+    nav ul li a:hover{
+        background: none;
+        color:rgb(216, 146, 22);
+    }
+}
